@@ -6,20 +6,6 @@ import './App.scss'; // Asegúrate de importar tu archivo SCSS
 
 function App() {
 
-  const reviewsData = [
-    {
-      id: 1,
-      image: './images/review-1.jpg',
-      review: 'Esta es la reseña de la primera imagen.',
-    },
-    {
-      id: 2,
-      image: './images/review-2.jpg',
-      review: 'Esta es la reseña de la segunda imagen.',
-    },
-    // Agrega más reseñas según sea necesario
-  ];
-
   return (
 <div className="App">
   {/* Header */}
@@ -168,18 +154,36 @@ function App() {
 
 
 <section className="reviews" id="resenas">
-      <div className="container">
-      <Carousel>
-  {reviewsData.map((review) => (
-    <div key={review.id}>
-      {console.log('Renderizando reseña', review.id)} {/* Agregar esta línea */}
-      <img src={review.image} alt={`Imagen ${review.id}`} />
-      <p>{review.review}</p>
-    </div>
-  ))}
-</Carousel>
+  <div className="container">
+  <Carousel autoPlay={true} interval={3000} showThumbs={false} className='carousel-container'>
+  <div style={{ position: 'relative', userSelect: 'none' }}>
+        <img src={require('./images/review-1.jpg')} alt='Almacén con Paneles Solares' />
+        <h3>Autor 1</h3>
+        <p>Reseña</p>
       </div>
-    </section>
+      <div style={{ position: 'relative', userSelect: 'none' }}>
+        <img src={require('./images/review-2.jpg')} alt='Departamentos con Paneles Solares' />
+        <h3>Autor 2</h3>
+        <p>Reseña</p>
+      </div>
+      <div style={{ position: 'relative', userSelect: 'none' }}>
+        <img src={require('./images/review-3.jpg')} alt='Casa con Paneles Solares' />
+        <h3>Autor 3</h3>
+        <p>Reseña</p>
+      </div>
+      <div style={{ position: 'relative', userSelect: 'none' }}>
+        <img src={require('./images/review-4.jpg')} alt='Campo con Paneles Solares' />
+        <h3>Autor 4</h3>
+        <p>Reseña</p>
+      </div>
+      <div style={{ position: 'relative', userSelect: 'none' }}>
+        <img src={require('./images/review-5.jpg')} alt='Edificio con Paneles Solares' />
+        <h3>Autor 5</h3>
+        <p>Reseña</p>
+      </div>
+    </Carousel>
+  </div>
+</section>
 
 
       {/* Contáctenos Section */}
