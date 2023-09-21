@@ -1,0 +1,189 @@
+// Define una variable para el color de fondo
+$color-de-fondo: #fff;
+
+// Aplica el color de fondo al body o al elemento HTML
+body {
+  background-color: $color-de-fondo;
+  margin: 0; // Elimina el margen predeterminado
+  padding: 0; // Elimina el relleno predeterminado
+}
+
+/* En App.scss o en tu archivo CSS */
+.hero {
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: auto;
+  z-index: 0; // Coloca la imagen detrás del contenido
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 1; // Asegura que el contenido esté encima de la imagen
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2; // Coloca la barra de navegación encima de todo
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: flex-end; // Alinea los elementos a la derecha
+}
+
+.nav-list li {
+  margin-right: 20px; // Espacio entre elementos de la lista
+}
+
+.nav-list li:last-child {
+  margin-right: 0; // No aplicar margen al último elemento
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+}
+
+.about {
+  background-color: #f8c600;
+  text-align: center; // Centra el texto horizontalmente
+  display: flex; // Usa el modelo de caja flexible
+  flex-direction: column; // Apila elementos verticalmente
+  justify-content: center; // Centra verticalmente el contenido
+  height: 30vh; // Ajusta la altura al 100% de la ventana
+}
+
+.about-content {
+  max-width: 1000px; // Ancho máximo del contenido
+  margin: 0 auto; // Centra el contenido horizontalmente
+}
+
+
+
+
+.services {
+  .container {
+    .services-content {
+      display: flex;
+      flex-direction: column; /* Cambia la dirección del flujo a columna para apilar los elementos verticalmente */
+
+      .service-item-1,
+      .service-item-3 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+      
+        img.hero-image {
+          width: 50%;
+        }
+      
+        .service-text-1,
+        .service-text-3 {
+          background-color: #494a5e;
+          padding: 10px;
+          color: white;
+          order: 2;
+          flex: 1;
+        }
+      
+        h3,
+        p {
+          margin: 0;
+          text-align: center;
+        }
+      }
+      
+      .service-item-2 {
+        display: flex;
+        flex-direction: row-reverse; /* Invierte la dirección del flujo a fila inversa para colocar la imagen a la derecha y el texto a la izquierda */
+        justify-content: space-between;
+      
+        img.hero-image {
+          width: 50%;
+        }
+      
+        .service-text-2 {
+          background-color: #494a5e;
+          padding: 10px;
+          color: white;
+          order: 2;
+          flex: 1;
+        }
+      
+        h3,
+        p {
+          margin: 0;
+          text-align: center;
+        }
+      }
+      
+    }
+  }
+}
+
+.mission {
+  position: relative; // Establece una posición relativa para que .mission-text esté posicionado en relación con este elemento
+  
+  .container {
+    position: relative; // Establece una posición relativa para que .mission-text esté posicionado en relación con este elemento
+    
+    img.hero-image {
+      width: 100%;
+      height: auto;
+      filter: brightness(0.85) contrast(0.85); /* Ajusta el brillo y el contraste */
+    }
+    
+    .mission-text {
+      position: absolute; // Establece una posición absoluta para .mission-text
+      color: #fff;
+      top: 50%; // Coloca el elemento en el centro vertical
+      left: 50%; // Coloca el elemento en el centro horizontal
+      transform: translate(-50%, -50%); // Centra el contenido en el medio
+      text-align: center; // Centra el texto horizontalmente
+      
+      h3 {
+        margin: 0; // Elimina el margen por defecto del encabezado
+      }
+      
+      p {
+        margin: 0; // Elimina el margen por defecto del párrafo
+      }
+    }
+  }
+}
+
+
+.financing {
+  .container {
+    background-color: #494a5e;
+    display: flex;
+    flex-direction: row-reverse; /* Cambiamos la dirección a fila inversa para que el video esté a la derecha */
+    align-items: center;
+
+    .text-container {
+      color: #fff;
+      flex: 1;
+      padding: 20px;
+    }
+
+    .video-container {
+      flex: 1;
+      padding: 20px;
+    }
+  }
+}
+
+
