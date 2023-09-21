@@ -1,7 +1,10 @@
 import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Importa los estilos CSS
+import { FaFacebook, FaInstagram, FaTwitter, FaGooglePlus } from "react-icons/fa";
+import './styles/scrollbar.css';
 import './App.scss'; // Asegúrate de importar tu archivo SCSS
+
 
 
 function App() {
@@ -176,27 +179,65 @@ function App() {
         <h3>Autor 4</h3>
         <p>Reseña</p>
       </div>
-      <div style={{ position: 'relative', userSelect: 'none' }}>
-        <img src={require('./images/review-5.jpg')} alt='Edificio con Paneles Solares' />
-        <h3>Autor 5</h3>
-        <p>Reseña</p>
-      </div>
     </Carousel>
   </div>
 </section>
 
 
-      {/* Contáctenos Section */}
-      <section className="contact" id="contactenos">
-        <div className="container">
-          {/* Contenido de la sección de contacto */}
+<section className="contact" id="contactenos">
+  <div className="container">
+  {/* Agrega los iconos de redes sociales */}
+  <div className="social-icons">
+          <a href="https://github.com/" className="social-icon">
+            <FaFacebook />
+          </a>
+          <a href="https://github.com/" className="social-icon">
+            <FaInstagram />
+          </a>
+          <a href="https://github.com/" className="social-icon">
+            <FaTwitter />
+          </a>
+          <a href="https://github.com/" className="social-icon">
+            <FaGooglePlus />
+          </a>
         </div>
-      </section>
+    {/* Contenido de la sección de contacto */}
+    <div className='container-form'>
+    <form>
+      <h2>Contacto</h2>
+      <div className="form-group">
+        <label className='form-text' htmlFor="nombreCompleto">Nombre Completo</label>
+        <input type="text" id="nombreCompleto" name="nombreCompleto" required />
+      </div>
+      <div className="form-group">
+        <label className='form-text' htmlFor="correoElectronico">Correo Electrónico</label>
+        <input type="email" id="correoElectronico" name="correoElectronico" required />
+      </div>
+      <div className="form-group">
+        <label className='form-text' htmlFor="numeroTelefono">Número de Teléfono</label>
+        <input type="tel" id="numeroTelefono" name="numeroTelefono" required />
+      </div>
+      <div className="form-group">
+        <label className='form-text' htmlFor="direccion">Dirección</label>
+        <input type="text" id="direccion" name="direccion" required />
+      </div>
+      <div className="form-group">
+        <label className='form-text' htmlFor="consumoAnual">Consumo Anual de Electricidad (kWh)</label>
+        <input type="number" id="consumoAnual" name="consumoAnual" required />
+      </div>
+      <button type="submit">Enviar</button>
+    </form>
+    </div>
+  </div>
+</section>
+
 
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          {/* Contenido del pie de página */}
+        <div className='copyright'>
+          © 2023 Alfredo García. Todos los derechos reservados.
+        </div>
         </div>
       </footer>
     </div>
