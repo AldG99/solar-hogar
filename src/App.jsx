@@ -2,7 +2,7 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Importa los estilos CSS
 import { FaFacebook, FaInstagram, FaTwitter, FaGooglePlus } from "react-icons/fa";
-import './styles/scrollbar.css';
+import './styles/scrollbar.scss';
 import './App.scss'; // Asegúrate de importar tu archivo SCSS
 
 
@@ -42,8 +42,12 @@ function App() {
       />
       <div className="hero-content">
         {/* Aquí puedes colocar el encabezado */}
-        <h1>Mi Sitio Web</h1>
-        <p>Bienvenido a mi sitio web de presentación.</p>
+        <h1>Descubre la Energía del Mañana</h1>
+        <p>Explora nuestra gama de paneles solares y únete a la revolución de la energía sostenible.</p>
+        <button type="button">
+  <a href="#acerca">Aprende Más</a>
+</button>
+
       </div>
     </div>
   </section>
@@ -82,6 +86,7 @@ function App() {
       />
         <div className='service-text-1'>
         <h3>Servicio 1</h3>
+        <h4>Servicio 1</h4>
         <p>Descripción del Servicio 1.</p>
         </div>
       </div>
@@ -95,6 +100,7 @@ function App() {
       />
         <div className='service-text-2'>
         <h3>Servicio 2</h3>
+        <h4>Servicio 1</h4>
         <p>Descripción del Servicio 2.</p>
         </div>
       </div>
@@ -108,6 +114,7 @@ function App() {
       />
       <div className='service-text-3'>
         <h3>Servicio 3</h3>
+        <h4>Servicio 1</h4>
         <p>Descripción del Servicio 3.</p>
         </div>
       </div>
@@ -158,7 +165,7 @@ function App() {
 
 <section className="reviews" id="resenas">
   <div className="container">
-  <Carousel autoPlay={true} interval={3000} showThumbs={false} className='carousel-container'>
+  <Carousel autoPlay={true} interval={3000} showThumbs={false} showStatus={false} infiniteLoop={true} className='carousel-container'>
   <div style={{ position: 'relative', userSelect: 'none' }}>
         <img src={require('./images/review-1.jpg')} alt='Almacén con Paneles Solares' />
         <h3>Autor 1</h3>
@@ -187,6 +194,7 @@ function App() {
 <section className="contact" id="contactenos">
   <div className="container">
   {/* Agrega los iconos de redes sociales */}
+  <div className='container-icons'>
   <div className="social-icons">
           <a href="https://github.com/" className="social-icon">
             <FaFacebook />
@@ -200,6 +208,7 @@ function App() {
           <a href="https://github.com/" className="social-icon">
             <FaGooglePlus />
           </a>
+        </div>
         </div>
     {/* Contenido de la sección de contacto */}
     <div className='container-form'>
