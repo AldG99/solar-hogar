@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 // Define una variable para el color de fondo
 $color-de-fondo: #fff;
 
@@ -5,8 +7,27 @@ $color-de-fondo: #fff;
 body {
   background-color: $color-de-fondo;
   margin: 0; // Elimina el margen predeterminado
-  padding: 0; // Elimina el relleno predeterminado
+  padding: 0; // Elimina el relleno predeterminado}
+  font-family: 'Roboto', sans-serif;
 }
+
+.logo-container {
+  position: relative;
+  /* Agrega otros estilos según sea necesario */
+}
+
+.logotipo {
+  position: absolute;
+  left: 20px; /* Ajusta la posición horizontal según tus necesidades */
+  z-index: 2; /* Asegura que el logotipo esté encima del contenido */
+  /* Estilos adicionales para el logotipo */
+}
+
+.logotipo img {
+  max-width: 200px; /* Ajusta el tamaño máximo del logotipo según tus necesidades */
+  height: auto; /* Mantiene la proporción original */
+}
+
 
 /* En App.scss o en tu archivo CSS */
 .hero {
@@ -18,28 +39,40 @@ body {
   width: 100%;
   height: auto;
   z-index: 0; // Coloca la imagen detrás del contenido
+  filter: brightness(0.85) contrast(1); /* Ajusta el brillo y el contraste */
 }
 
+/* Estilo para .hero-content */
 .hero-content {
   position: absolute;
-  top: 50%;
-  left: 20px;
+  top: 45%;
+  left: 12%;
+  text-align: center;
   transform: translateY(-50%);
   color: white;
-  z-index: 1; // Asegura que el contenido esté encima de la imagen
+  z-index: 1; /* Asegura que el contenido esté encima de la imagen */
+
+  h1 {
+    font-size: 60px; /* Tamaño de fuente fijo */
+  }
+
+  p {
+    font-size: 70px; /* Tamaño de fuente fijo */
+  }
 }
 
 /* Estilo para el botón "Aprende Más" */
 button[type="button"] {
   background-color: #f8c600; /* Color de fondo del botón */
-  color: #fff; /* Color del texto del botón */
-  border: none; /* Sin borde */
-  border-radius: 4px; /* Bordes redondeados */
-  padding: 10px 20px; /* Relleno interno del botón */
-  font-size: 16px; /* Tamaño de fuente */
-  cursor: pointer; /* Cambia el cursor al pasar por encima */
-  text-decoration: none; /* Sin subrayado */
-  display: inline-block; /* Para que el botón no ocupe todo el ancho */
+  color: #000;
+  outline: none;
+  padding: 15px 35px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 30px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
 
   &:hover {
     background-color: #fff; /* Cambia el color al pasar el cursor */
@@ -77,8 +110,7 @@ button[type="button"] {
   text-decoration: none;
   transition: color 0.3s ease, font-weight 0.3s ease; /* Transiciones suaves para el color y el peso de la fuente */
   font-weight: normal; /* Inicialmente, establece el peso de la fuente como normal */
-  font-size: 2.5vh;
-  font-weight: bold;
+  font-size: 2vh;
 }
 
 /* Cambia el color y el peso de la fuente cuando el cursor pasa sobre los elementos de navegación */
@@ -88,6 +120,35 @@ button[type="button"] {
 
 /* Media query para ajustar el tamaño de fuente en pantallas más pequeñas */
 @media screen and (max-width: 768px) {
+  .logotipo img {
+    margin-top: 425%;
+    max-width: 50px; /* Ajusta el tamaño máximo del logotipo según tus necesidades */
+    height: auto; /* Mantiene la proporción original */
+  }
+  /* Estilo para .hero-content */
+.hero-content {
+  position: absolute;
+  top: 45%;
+  left: 20%;
+  text-align: center;
+  transform: translateY(-50%);
+  color: white;
+  z-index: 1; /* Asegura que el contenido esté encima de la imagen */
+
+  h1 {
+    font-size: 18px; /* Tamaño de fuente fijo */
+  }
+
+  p {
+    font-size: 15px; /* Tamaño de fuente fijo */
+  }
+}
+
+/* Estilo para el botón "Aprende Más" */
+button[type="button"] {
+  font-size: 10px; /* Tamaño de fuente fijo */
+}
+
   .navbar {
     position: absolute;
     top: 15px; /* Añade espacio en la parte superior de la pantalla */
@@ -106,16 +167,24 @@ button[type="button"] {
 
 .about {
   background-color: #f8c600;
-  padding: 5%;
+  padding: 3%;
   color: #494a5e;
   text-align: center; // Centra el texto horizontalmente
   display: flex; // Usa el modelo de caja flexible
   flex-direction: column; // Apila elementos verticalmente
   justify-content: center; // Centra verticalmente el contenido
+
+  h2 {
+    font-size: 6vh;
+  }
+
+  p {
+    font-size: 2.5vh;
+  }
 }
 
 .about-content {
-  max-width: 1000px; // Ancho máximo del contenido
+  max-width: 1450px; // Ancho máximo del contenido
   margin: 0 auto; // Centra el contenido horizontalmente
 }
 
@@ -145,14 +214,22 @@ button[type="button"] {
           color: white;
           order: 2;
           flex: 1;
+          margin: 0;
+          padding-left: 5%;
+          padding-right: 5%;
+        }
+
+        h3 {
+          margin-bottom: 4px;
+          font-size: 2.5vh;
+        }
+
+        h4 {
+          margin-top: auto;
+          margin-bottom: 40px;
+          font-size: 3.5vh;
         }
       
-        h3,
-        h4,
-        p {
-          margin: 0;
-          padding-left: 10%;
-        }
       }
       
       .service-item-2 {
@@ -170,13 +247,19 @@ button[type="button"] {
           color: white;
           order: 2;
           flex: 1;
-        }
-      
-        h3,
-        h4,
-        p {
-          margin: 0;
           padding-left: 10%;
+          padding-right: 10%;
+        }
+
+        h3 {
+          margin-bottom: 4px;
+          font-size: 2.5vh;
+        }
+
+        h4 {
+          margin-top: auto;
+          margin-bottom: 40px;
+          font-size: 3.5vh;
         }
       }
       
@@ -200,16 +283,18 @@ button[type="button"] {
     .mission-text {
       position: absolute; // Establece una posición absoluta para .mission-text
       color: #fff;
-      top: 50%; // Coloca el elemento en el centro vertical
-      left: 50%; // Coloca el elemento en el centro horizontal
-      transform: translate(-50%, -50%); // Centra el contenido en el medio
+      margin-right: 15%;
+      margin-left: 15%;
+      top: 40%; // Coloca el elemento en el centro vertical
       text-align: center; // Centra el texto horizontalmente
       
       h3 {
+        font-size: 6.5vh;
         margin: 0; // Elimina el margen por defecto del encabezado
       }
       
       p {
+        font-size: 2vh;
         margin: 0; // Elimina el margen por defecto del párrafo
       }
     }
@@ -220,7 +305,9 @@ button[type="button"] {
 .financing {
   .container {
     background-color: #494a5e;
-    padding: 7.5%;
+    padding: 6%;
+    padding-left: 15%;
+    padding-right: 15%;
     display: flex;
     flex-direction: row-reverse; /* Cambiamos la dirección a fila inversa para que el video esté a la derecha */
     align-items: center;
@@ -229,11 +316,19 @@ button[type="button"] {
       color: #fff;
       flex: 1;
       padding: 20px;
+
+      h3 {
+        font-size: 3vh;
+      }
+
+      p {
+        font-size: 2vh;
+      }
     }
 
     .video-container {
       flex: 1;
-      padding: 20px;
+      padding: 10px;
     }
   }
 }
@@ -253,20 +348,23 @@ button[type="button"] {
     img {
       width: 100%;
       height: auto;
+      filter: brightness(0.75) contrast(1); /* Ajusta el brillo y el contraste */
     }
 
     p {
       position: absolute;
-      top: 50%;
+      top: 25%;
       left: 50%;
+      font-size: 3.5vh;
       transform: translate(-50%, -50%);
       color: #fff; // Cambiar color de texto según tus preferencias
     }
 
     h3 {
       position: absolute;
-      top: 75%; // Ajusta la posición vertical según tus necesidades
+      top: 40%; // Ajusta la posición vertical según tus necesidades
       left: 50%;
+      font-size: 2.5vh;
       transform: translateX(-50%);
       color: #fff; // Cambiar color de texto según tus preferencias
     }
@@ -282,12 +380,25 @@ button[type="button"] {
 .container-icons{
   margin-right: 40%;
   margin-left: 5%;
+
+  h2 {
+    font-size: 4vh;
+    color: #494a5e;
+    display: flex; // Usa el modelo de caja flexible
+
+  }
+
+  p {
+    font-size: 2vh;
+    color: #494a5e;
+    display: flex; // Usa el modelo de caja flexible
+  }
 }
 
 .social-icon {
   padding-left: 1.5%;
   font-size: 24px;
-  color: #007bff;
+  color: #494a5e;
 }
 
 .container-form {
@@ -326,18 +437,19 @@ label {
 
 /* Estilo para el botón de enviar */
 button[type="submit"] {
-  background-color: #007bff;
+  background-color: #494a5e;
   color: #fff;
-  padding: 10px 20px;
+  padding: 15px 35px;
   border: none;
   border-radius: 20px;
   cursor: pointer;
   font-size: 18px;
+  font-weight: bold;
   transition: background-color 0.3s ease;
 }
 
 button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: #494a5e;
 }
 
 /* Estilo para los mensajes de error (puedes mostrarlos usando JavaScript) */
