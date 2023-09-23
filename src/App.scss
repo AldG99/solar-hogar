@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 // Define una variable para el color de fondo
+
 $color-de-fondo: #fff;
 
 // Aplica el color de fondo al body o al elemento HTML
+
 body {
   background-color: $color-de-fondo;
   margin: 0; // Elimina el margen predeterminado
@@ -13,14 +15,12 @@ body {
 
 .logo-container {
   position: relative;
-  /* Agrega otros estilos según sea necesario */
 }
 
 .logotipo {
   position: absolute;
   left: 20px; /* Ajusta la posición horizontal según tus necesidades */
   z-index: 2; /* Asegura que el logotipo esté encima del contenido */
-  /* Estilos adicionales para el logotipo */
 }
 
 .logotipo img {
@@ -28,8 +28,8 @@ body {
   height: auto; /* Mantiene la proporción original */
 }
 
+/* En App.scss */
 
-/* En App.scss o en tu archivo CSS */
 .hero {
   position: relative;
   margin-bottom: -1%;
@@ -43,6 +43,7 @@ body {
 }
 
 /* Estilo para .hero-content */
+
 .hero-content {
   position: absolute;
   top: 45%;
@@ -62,6 +63,7 @@ body {
 }
 
 /* Estilo para el botón "Aprende Más" */
+
 button[type="button"] {
   background-color: #f8c600; /* Color de fondo del botón */
   color: #000;
@@ -78,7 +80,6 @@ button[type="button"] {
     background-color: #fff; /* Cambia el color al pasar el cursor */
   }
 }
-
 
 .navbar {
   position: absolute;
@@ -105,6 +106,7 @@ button[type="button"] {
 }
 
 /* Estilo para los elementos de navegación */
+
 .nav-list a {
   color: white;
   text-decoration: none;
@@ -114,40 +116,46 @@ button[type="button"] {
 }
 
 /* Cambia el color y el peso de la fuente cuando el cursor pasa sobre los elementos de navegación */
+
 .nav-list a:hover {
   color: #ffde6a; /* Cambia el color al pasar el cursor */
 }
 
 /* Media query para ajustar el tamaño de fuente en pantallas más pequeñas */
+
 @media screen and (max-width: 768px) {
+
   .logotipo img {
     margin-top: 425%;
     max-width: 50px; /* Ajusta el tamaño máximo del logotipo según tus necesidades */
     height: auto; /* Mantiene la proporción original */
   }
+
   /* Estilo para .hero-content */
-.hero-content {
-  position: absolute;
-  top: 45%;
-  left: 20%;
-  text-align: center;
-  transform: translateY(-50%);
-  color: white;
-  z-index: 1; /* Asegura que el contenido esté encima de la imagen */
 
-  h1 {
-    font-size: 18px; /* Tamaño de fuente fijo */
+  .hero-content {
+    position: absolute;
+    top: 45%;
+    left: 20%;
+    text-align: center;
+    transform: translateY(-50%);
+    color: white;
+    z-index: 1; /* Asegura que el contenido esté encima de la imagen */
+
+    h1 {
+      font-size: 18px; /* Tamaño de fuente fijo */
+    }
+
+    p {
+      font-size: 15px; /* Tamaño de fuente fijo */
+    }
   }
 
-  p {
-    font-size: 15px; /* Tamaño de fuente fijo */
-  }
-}
+  /* Estilo para el botón "Aprende Más" */
 
-/* Estilo para el botón "Aprende Más" */
-button[type="button"] {
-  font-size: 10px; /* Tamaño de fuente fijo */
-}
+  button[type="button"] {
+    font-size: 10px; /* Tamaño de fuente fijo */
+  }
 
   .navbar {
     position: absolute;
@@ -161,9 +169,8 @@ button[type="button"] {
 
   .nav-list li {
     margin-right: 15px; // Espacio entre elementos de la lista
-  }  
+  }
 }
-
 
 .about {
   background-color: #f8c600;
@@ -187,9 +194,6 @@ button[type="button"] {
   max-width: 1450px; // Ancho máximo del contenido
   margin: 0 auto; // Centra el contenido horizontalmente
 }
-
-
-
 
 .services {
   .container {
@@ -301,7 +305,6 @@ button[type="button"] {
   }
 }
 
-
 .financing {
   .container {
     background-color: #494a5e;
@@ -333,8 +336,8 @@ button[type="button"] {
   }
 }
 
-
 // Estilo para el contenedor del carrusel
+
 .carousel-container {
   display: flex;
   flex-direction: column;
@@ -371,7 +374,6 @@ button[type="button"] {
   }
 }
 
-
 .contact {
   background-color: #f8c600; /* Cambia el color de fondo según tus preferencias */
   padding: 80px 0; /* Agrega espaciado interno para separar el contenido del fondo */
@@ -407,6 +409,7 @@ button[type="button"] {
 }
 
 /* Estilo para el formulario */
+
 form {
   background-color: #f9f9f9;
   padding: 30px;
@@ -416,6 +419,7 @@ form {
 }
 
 /* Estilo para los campos de entrada */
+
 input[type="text"],
 input[type="email"],
 input[type="tel"],
@@ -429,6 +433,7 @@ input[type="number"] {
 }
 
 /* Estilo para las etiquetas de formulario */
+
 label {
   display: block;
   font-weight: bold;
@@ -436,6 +441,7 @@ label {
 }
 
 /* Estilo para el botón de enviar */
+
 button[type="submit"] {
   background-color: #494a5e;
   color: #fff;
@@ -453,6 +459,7 @@ button[type="submit"]:hover {
 }
 
 /* Estilo para los mensajes de error (puedes mostrarlos usando JavaScript) */
+
 .error-message {
   color: #ff9d00;
   font-size: 14px;
@@ -460,6 +467,7 @@ button[type="submit"]:hover {
 }
 
 /* Estilo para el formulario en dispositivos móviles */
+
 @media (max-width: 768px) {
   form {
     padding: 15px;
@@ -469,9 +477,6 @@ button[type="submit"]:hover {
     font-size: 16px;
   }
 }
-
-
-
 
 .footer {
   font-size: 1.5vh;
@@ -483,4 +488,3 @@ button[type="submit"]:hover {
   text-align: center; /* Centra el contenido del pie de página horizontalmente */
   padding: 50px 0; /* Espaciado interno (ajusta según tus necesidades) */
 }
-
