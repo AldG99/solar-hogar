@@ -163,7 +163,7 @@ function App() {
             />
           </div>
           <div className='text-container'>
-            <h3>Financiación Flexible para un Futuro Sostenible</h3>
+            <h3>Financiación Flexible</h3>
             <p>
               En Solar Hogar, entendemos que dar el salto hacia la energía solar puede ser una inversión significativa. Por eso, ofrecemos soluciones de financiación flexibles diseñadas para hacer que la transición a la energía solar sea accesible para todos. Nuestros planes de financiamiento te permiten disfrutar de los beneficios de la energía solar sin un impacto inmediato en tu presupuesto. Con tasas competitivas y plazos flexibles, estamos comprometidos en ayudarte a impulsar un futuro sostenible sin preocupaciones financieras. Juntos, podemos hacer que la energía solar sea una realidad para tu hogar o negocio.
             </p>
